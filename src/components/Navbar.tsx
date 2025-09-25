@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Shield, Eye, Cpu, FileText, Users, Home } from "lucide-react";
 import aiDetectorRobot from "@/assets/ai-detector-robot.jpg";
-import { ThemeToggle } from "./ThemeToggle";
 
 interface NavbarProps {
   activeSection: string;
@@ -66,7 +65,6 @@ export const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
                 <span className="font-medium">{label}</span>
               </button>
             ))}
-            <ThemeToggle />
             <Button 
               variant="default" 
               className="ai-glow"
@@ -76,9 +74,7 @@ export const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"

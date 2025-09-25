@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Shield, Clock, Database, Play, FileText, Brain, Eye, Zap } from "lucide-react";
 import aiRobotHero from "@/assets/ai-robot-hero.jpg";
-import faceDetection1 from "@/assets/face-detection-1.jpg";
+import menFaceDetection from "@/assets/men-face-detection.jpg";
 import faceDetection2 from "@/assets/face-detection-2.jpg";
 
 export const HeroSection = () => {
@@ -92,8 +92,8 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
               <div className="w-full sm:w-72 md:w-80 lg:w-96 h-40 sm:h-48 md:h-52 rounded-xl overflow-hidden glass-effect ai-glow">
                 <img 
-                  src={faceDetection1} 
-                  alt="AI Face Detection Technology"
+                  src={menFaceDetection} 
+                  alt="Men's AI Face Detection Technology"
                   className="w-full h-full object-cover"
                 />
               </div>

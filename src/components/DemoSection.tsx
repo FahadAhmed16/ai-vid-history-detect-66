@@ -27,8 +27,8 @@ export const DemoSection = () => {
   const [showHistory, setShowHistory] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Mock detection history
-  const detectionHistory = [
+  // Detection history state
+  const [detectionHistory, setDetectionHistory] = useState([
     {
       id: 1,
       filename: "sample_video_1.mp4",
@@ -53,7 +53,7 @@ export const DemoSection = () => {
       timestamp: "2025-01-15 12:15:43",
       details: "Artificial facial boundary artifacts and unnatural micro-expressions"
     }
-  ];
+  ]);
 
   const sampleResults = [
     {
@@ -137,7 +137,19 @@ export const DemoSection = () => {
     setAnalysisResult(mockResult);
     setIsAnalyzing(false);
     setAnalysisComplete(true);
-    toast.success("Analysis completed!");
+    
+    // Add to detection history
+    const newHistoryItem = {
+      id: detectionHistory.length + 1,
+      filename: mockResult.filename,
+      result: mockResult.result,
+      confidence: mockResult.confidence,
+      timestamp: mockResult.timestamp,
+      details: mockResult.details
+    };
+    setDetectionHistory(prev => [newHistoryItem, ...prev]);
+    
+    toast.success("Analysis completed and saved to history!");
   };
 
   const triggerFileUpload = () => {

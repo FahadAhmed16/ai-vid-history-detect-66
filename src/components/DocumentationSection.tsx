@@ -305,20 +305,6 @@ while True:
                       <Badge variant={pub.status === 'Published' || pub.status === 'Accepted' ? 'default' : 'outline'} className={pub.status === 'Under Review' ? 'bg-white text-black border border-gray-300' : 'text-xs'}>
                         {pub.status}
                       </Badge>
-                      <Button 
-                        variant="outline" 
-                        size="icon" 
-                        className="h-8 w-8"
-                        onClick={() => {
-                          if (pub.status === 'Published' || pub.status === 'Accepted') {
-                            window.open(`https://doi.org/example-${pub.title.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
-                          } else {
-                            alert(`Research paper "${pub.title}" is currently under review. Full text will be available upon publication.`);
-                          }
-                        }}
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                      </Button>
                     </div>
                   </div>
                 </CardContent>

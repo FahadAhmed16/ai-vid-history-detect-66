@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Shield, Clock, Database, Play, FileText, Brain, Eye, Zap } from "lucide-react";
-import aiRobotHero from "@/assets/ai-robot-hero.jpg";
+import Typewriter from "react-typewriter-effect";
+import aiRobotDark from "@/assets/ai-robot-dark.jpg";
 import menFaceDetection from "@/assets/men-face-detection.jpg";
 import faceDetection2 from "@/assets/face-detection-2.jpg";
 
@@ -71,9 +72,9 @@ export const HeroSection = () => {
     <section id="overview" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `url(${aiRobotHero})`,
+          backgroundImage: `url(${aiRobotDark})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -117,17 +118,36 @@ export const HeroSection = () => {
           {/* Main Title */}
           <div className="space-y-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
-              <span className="text-foreground">AI-Powered </span>
-              <span className="text-foreground font-extrabold animate-pulse-slow">
-                Deepfake
-              </span>
-              <br />
-              <span className="text-foreground">Detection System</span>
+              <Typewriter
+                textStyle={{
+                  color: 'hsl(var(--foreground))',
+                  fontWeight: 'bold',
+                }}
+                startDelay={1000}
+                cursorColor="hsl(var(--primary))"
+                multiText={[
+                  'AI-Powered Deepfake Detection System',
+                ]}
+                multiTextDelay={1000}
+                typeSpeed={100}
+                multiTextLoop
+              />
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Advanced machine learning technology to identify and combat synthetic media manipulation 
-              using state-of-the-art neural networks and computer vision algorithms.
+              <Typewriter
+                textStyle={{
+                  color: 'hsl(var(--muted-foreground))',
+                }}
+                startDelay={3000}
+                cursorColor="hsl(var(--primary))"
+                multiText={[
+                  'Advanced machine learning technology to identify and combat synthetic media manipulation using state-of-the-art neural networks and computer vision algorithms.',
+                ]}
+                multiTextDelay={1000}
+                typeSpeed={50}
+                multiTextLoop
+              />
             </p>
           </div>
 

@@ -243,7 +243,7 @@ while True:
                 <Card key={index} className="glass-effect">
                   <CardContent className="p-4 sm:p-6">
                     <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                      <div className="w-7 h-7 sm:w-8 sm:h-8 tech-gradient rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm">
                         {step.step}
                       </div>
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
@@ -302,10 +302,21 @@ while True:
                       <p className="text-primary font-medium text-sm">{pub.venue} • {pub.year}</p>
                     </div>
                     <div className="flex items-center space-x-2 self-start">
-                      <Badge variant={pub.status === 'Published' || pub.status === 'Accepted' ? 'default' : 'secondary'} className="text-xs">
+                      <Badge variant={pub.status === 'Published' || pub.status === 'Accepted' ? 'default' : 'outline'} className={pub.status === 'Under Review' ? 'bg-white text-black border border-gray-300' : 'text-xs'}>
                         {pub.status}
                       </Badge>
-                      <Button variant="outline" size="icon" className="h-8 w-8">
+                      <Button 
+                        variant="outline" 
+                        size="icon" 
+                        className="h-8 w-8"
+                        onClick={() => {
+                          if (pub.status === 'Published' || pub.status === 'Accepted') {
+                            window.open(`https://doi.org/example-${pub.title.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
+                          } else {
+                            alert(`Research paper "${pub.title}" is currently under review. Full text will be available upon publication.`);
+                          }
+                        }}
+                      >
                         <ExternalLink className="w-3 h-3" />
                       </Button>
                     </div>

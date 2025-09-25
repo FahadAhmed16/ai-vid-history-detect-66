@@ -154,7 +154,7 @@ export const TechnologySection = () => {
                 <div key={index} className="relative">
                   <Card className="glass-effect hover:shadow-lg transition-all duration-300 p-6">
                     <div className="text-center space-y-4">
-                      <div className="w-12 h-12 mx-auto tech-gradient rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-12 h-12 mx-auto bg-black rounded-full flex items-center justify-center text-white font-bold text-lg">
                         {step.step}
                       </div>
                       <Icon className="w-8 h-8 mx-auto text-primary" />

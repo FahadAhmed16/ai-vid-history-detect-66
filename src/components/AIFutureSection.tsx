@@ -255,7 +255,7 @@ export const AIFutureSection = () => {
                         </div>
                         <Badge variant="outline">{app.timeline}</Badge>
                       </div>
-                      <Badge className="ai-gradient text-white">{app.impact}</Badge>
+                      <Badge className="bg-black text-white">{app.impact}</Badge>
                     </div>
                     <CardTitle className="text-xl">{app.title}</CardTitle>
                   </CardHeader>
@@ -366,7 +366,7 @@ export const AIFutureSection = () => {
               <h3 className="text-xl font-bold mb-6">Technology Roadmap</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-12 h-12 rounded-full tech-gradient mx-auto flex items-center justify-center text-white font-bold mb-3">2025</div>
+                  <div className="w-12 h-12 rounded-full bg-black mx-auto flex items-center justify-center text-white font-bold mb-3">2025</div>
                   <p className="text-sm font-medium">Current Systems</p>
                   <p className="text-xs text-muted-foreground">98.7% accuracy</p>
                 </div>
@@ -376,7 +376,7 @@ export const AIFutureSection = () => {
                   <p className="text-xs text-muted-foreground">Platform integration</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 rounded-full tech-gradient mx-auto flex items-center justify-center text-white font-bold mb-3">2029</div>
+                  <div className="w-12 h-12 rounded-full bg-black mx-auto flex items-center justify-center text-white font-bold mb-3">2029</div>
                   <p className="text-sm font-medium">Edge Computing</p>
                   <p className="text-xs text-muted-foreground">Mobile & IoT</p>
                 </div>

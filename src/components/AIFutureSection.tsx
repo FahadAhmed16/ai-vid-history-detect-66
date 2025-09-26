@@ -156,7 +156,7 @@ export const AIFutureSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            🚀 Future of AI
+            🚀 Future
           </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 blue-heading-bar">
             <span>

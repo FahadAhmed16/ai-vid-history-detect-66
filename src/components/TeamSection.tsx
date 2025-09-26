@@ -14,7 +14,7 @@ export const TeamSection = () => {
   const teamMembers = [
     {
       name: "Fahad Ahmed",
-      role: "Lead Researcher", 
+      role: "Research Assistant",
       department: "IT Department",
       level: "Final Year Student",
       initials: "FA",
@@ -34,7 +34,7 @@ export const TeamSection = () => {
     },
     {
       name: "Junaid Ali",
-      role: "Research Assistant",
+      role: "Lead Researcher",
       department: "IT Department",
       level: "Final Year Student", 
       initials: "JA",
@@ -125,7 +125,7 @@ export const TeamSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            👥 Research Team
+            👥 Team
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 blue-heading-bar">
             <span>

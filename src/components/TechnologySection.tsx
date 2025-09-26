@@ -92,7 +92,7 @@ export const TechnologySection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            🔬 Advanced Technology Stack
+            🔬 Technology Stack
           </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 blue-heading-bar">
               <span>

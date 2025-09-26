@@ -7,6 +7,7 @@ import { ResultsSection } from "@/components/ResultsSection";
 import { AIFutureSection } from "@/components/AIFutureSection";
 import { TeamSection } from "@/components/TeamSection";
 import { DocumentationSection } from "@/components/DocumentationSection";
+import aiDetectorRobot from "@/assets/ai-detector-robot.jpg";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("overview");
@@ -53,8 +54,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-lg tech-gradient flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AI</span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden ai-glow">
+                <img 
+                  src={aiDetectorRobot} 
+                  alt="AI Detector Robot" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-xl font-bold text-foreground">
                 Deepfake Video Detector
